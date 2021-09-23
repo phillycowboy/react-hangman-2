@@ -58,6 +58,14 @@ class Hangman extends Component {
     ));
   }
 
+  handleReset = () => {
+    this.setState({
+      nWrong: 0, 
+      guessed: new Set(), 
+      answer: randomWord() 
+    })
+  }
+
   /** render: render game */
   render() {
     const gameOver = this.state.nWrong >= this.props.maxWrong
@@ -76,6 +84,7 @@ class Hangman extends Component {
           : "You Lose!"}
           {/* {this.generateButtons()} */}
         </p>
+        <button onClick={this.handleReset}>Restart?</button>
       </div>
 
     );
