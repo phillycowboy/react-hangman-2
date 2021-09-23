@@ -64,6 +64,8 @@ class Hangman extends Component {
         <p className='Hangman-word'>{this.guessedWord()}</p>
         <p className='Hangman-btns'>{this.generateButtons()}</p>
       </div>
+      // seeing if this will work
+      
     );
   }
 }
